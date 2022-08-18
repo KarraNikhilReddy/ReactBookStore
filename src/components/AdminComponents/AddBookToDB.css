@@ -1,0 +1,52 @@
+
+
+#addBookForm {
+  margin-top: 150px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 20px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  box-shadow: 0 0 60px rgb(255, 0, 0);
+  margin-bottom: 50px;
+}
+
+.inputLabel {
+  text-align: right;
+}
+
+.inputValue {
+  text-align: cent;
+}
+
+.form-control {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  border: 2px solid;
+  outline: none !important;
+}
+
+.form-control:focus {
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  outline: none !important;
+  border-color: #fa0000;
+  box-shadow: 0 0 10px #ff0000;
+}
+.inputField {
+  margin-bottom: 20px;
+  outline: none !important;
+}
+
+
+.addMessage {
+  color: rgb(0, 170, 0);
+  font-family: serif;
+  margin-top: 30px;
+}
+
+
+.addBookToDBbtn{
+  margin-bottom: 100px;
+}
