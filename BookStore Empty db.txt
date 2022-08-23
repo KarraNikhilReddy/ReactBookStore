@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "aaaa",
+      "email": "a@a",
+      "password": "aaaa",
+      "cart": [],
+      "mybooks": []
+    }
+  ],
+  "books": [
+    {
+      "bookName": "space",
+      "author": "Carl Sagan",
+      "description": "A book of space sciences",
+      "quantity": "7",
+      "price": "98.5",
+      "category": "encyclopedia",
+      "id": 1
+    }
+  ],
+  "book_categories": [
+    {
+      "id": "encyclopedia",
+      "relatedBookIds": [
+        1
+      ]
+    }
+  ]
+}
