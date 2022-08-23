@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ReactBookStore/static/css/main.46597161.css",
+    "main.js": "/ReactBookStore/static/js/main.71546657.js",
+    "static/js/787.260b441c.chunk.js": "/ReactBookStore/static/js/787.260b441c.chunk.js",
+    "static/media/testPic.jpg": "/ReactBookStore/static/media/testPic.131ea005d07c981cb96e.jpg",
+    "static/media/Spell of Tiger.webp": "/ReactBookStore/static/media/Spell of Tiger.894d3b755d02ffcaeb7c.webp",
+    "static/media/Dark Matter.webp": "/ReactBookStore/static/media/Dark Matter.b88ad077cd57404bf17e.webp",
+    "static/media/The Time Machine.webp": "/ReactBookStore/static/media/The Time Machine.8dc818bfeebb343aa68b.webp",
+    "static/media/Karma.webp": "/ReactBookStore/static/media/Karma.123d9fe3e8eece7cac1a.webp",
+    "static/media/Space.webp": "/ReactBookStore/static/media/Space.b4c37a0d154ba9128c6d.webp",
+    "static/media/Game of Thrones.webp": "/ReactBookStore/static/media/Game of Thrones.6400cad322f6687db9e7.webp",
+    "static/media/Electrical Machine Design.webp": "/ReactBookStore/static/media/Electrical Machine Design.3230fb43eb461758e4b0.webp",
+    "static/media/The Dhoni Touch.webp": "/ReactBookStore/static/media/The Dhoni Touch.6b780b5ea722785e9fcd.webp",
+    "static/media/Power of Mind.webp": "/ReactBookStore/static/media/Power of Mind.a26dfb97c0c9e65aa601.webp",
+    "static/media/defaultBookImg.jpg": "/ReactBookStore/static/media/defaultBookImg.5f016a40bb884b22ff52.jpg",
+    "static/media/Magic Mindset.webp": "/ReactBookStore/static/media/Magic Mindset.d918f07d4dd919d9c107.webp",
+    "static/media/Light of Impossible Stars.webp": "/ReactBookStore/static/media/Light of Impossible Stars.40fec539740da2d526f3.webp",
+    "static/media/My Journey.webp": "/ReactBookStore/static/media/My Journey.c012672a41a6a87c43a7.webp",
+    "static/media/Dictionary.webp": "/ReactBookStore/static/media/Dictionary.8091b39249b7af0ec5f2.webp",
+    "static/media/General Knowledge.webp": "/ReactBookStore/static/media/General Knowledge.55bf6584eafe69ca9fb3.webp",
+    "index.html": "/ReactBookStore/index.html",
+    "main.46597161.css.map": "/ReactBookStore/static/css/main.46597161.css.map",
+    "main.71546657.js.map": "/ReactBookStore/static/js/main.71546657.js.map",
+    "787.260b441c.chunk.js.map": "/ReactBookStore/static/js/787.260b441c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.46597161.css",
+    "static/js/main.71546657.js"
+  ]
+}
