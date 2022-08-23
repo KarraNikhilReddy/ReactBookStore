@@ -1,4 +1,4 @@
-export const BOOK_CATEGORIES_API= 'http://localhost:8000/book_categories'
+export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
 
 export const GET_BOOK_CATEGORIES = "GET_BOOK_CATEGORIES"
 
