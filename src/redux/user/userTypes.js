@@ -13,4 +13,4 @@ export const RESET_CURRENT_USER = "RESET_CURRENT_USER"
 export const SET_USERS = "SET_USERS"
 
 
-export const USERS_API= 'http://localhost:8000/users'
+export const USERS_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/users'
