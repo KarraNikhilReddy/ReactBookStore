@@ -93,7 +93,6 @@ export const addUser = (user) => {
     dispatch(crudOppRequest("addUser loading"));
 
 
-
     axios
       .post(USERS_API, user)
       .then((response) => {
