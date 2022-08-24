@@ -1,1 +1,1 @@
-export default COMMON_API = "https://bookstore-serverapi.herokuapp.com"
+export const COMMON_API = "https://bookstore-serverapi.herokuapp.com"
