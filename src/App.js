@@ -4,7 +4,9 @@ import store, { Persistor } from "./redux/store";
 import { Provider } from "react-redux";
 import CRUDUser from "./components/CRUDUser";
 import CRUDBook from "./components/CRUDBook";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Banner from "./components/DefaultComponents/Banner";
 import Home from "./components/DefaultComponents/Home";
