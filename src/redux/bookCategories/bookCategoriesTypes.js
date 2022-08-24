@@ -1,4 +1,14 @@
-export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
+import commonApi from "../commonApi"
+
+
+
+
+// export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
+
+
+export const BOOK_CATEGORIES_API= `${commonApi}/users/book_categories`
+
+
 
 export const GET_BOOK_CATEGORIES = "GET_BOOK_CATEGORIES"
 

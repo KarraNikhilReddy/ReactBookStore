@@ -1,3 +1,8 @@
+import commonApi from "../commonApi"
+
+export const USERS_API= `${commonApi}/users`
+
+
 export const CRUD_OPP_REQUEST = 'CRUD_OPP_REQUEST'
 
 export const CRUD_OPP_SUCCESS = 'CRUD_OPP_SUCCESS'
@@ -13,4 +18,6 @@ export const RESET_CURRENT_USER = "RESET_CURRENT_USER"
 export const SET_USERS = "SET_USERS"
 
 
-export const USERS_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/users'
+// export const USERS_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/users'
+
+

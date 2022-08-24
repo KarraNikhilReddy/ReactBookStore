@@ -1,3 +1,6 @@
+import commonApi from "../commonApi"
+
+
 export const BOOKS_CRUD_OPP_REQUEST = 'BOOKS_CRUD_OPP_REQUEST'
 
 export const BOOKS_CRUD_OPP_SUCCESS = 'BOOKS_CRUD_OPP_SUCCESS'
@@ -22,8 +25,18 @@ export const SET_BOOKS = "SET_BOOKS"
 
 
 
-export const BOOKS_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/books'
+// export const BOOKS_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/books'
 
-export const TIMELINE_API = "https://my-json-server.typicode.com/KarraNikhilReddy/db/timeline"
+// export const TIMELINE_API = "https://my-json-server.typicode.com/KarraNikhilReddy/db/timeline"
 
-export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
+// export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
+
+
+
+
+
+export const BOOKS_API= `${commonApi}/books`
+
+export const TIMELINE_API = `${commonApi}/timeline`
+
+export const BOOK_CATEGORIES_API= `${commonApi}/book_categories`
