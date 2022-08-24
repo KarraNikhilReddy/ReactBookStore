@@ -249,7 +249,7 @@ const bookCategorySort = (book, newBookId) => {
       }).then(() => {
         setTimeout(() => {
           window.location.reload()
-        }, 500);
+        }, 3000);
        
       })
   }
