@@ -1,5 +1,4 @@
-import commonApi from "../commonApi"
-
+import {commonApi} from "../commonApi"
 
 export const BOOKS_CRUD_OPP_REQUEST = 'BOOKS_CRUD_OPP_REQUEST'
 

@@ -1,4 +1,4 @@
-import commonApi from "../commonApi"
+import {commonApi} from "../commonApi"
 
 export const USERS_API= `${commonApi}/users`
 
