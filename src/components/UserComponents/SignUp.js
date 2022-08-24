@@ -43,10 +43,7 @@ function SignUp() {
     e.preventDefault();
   
     dispatch(addUser(user));
-    setInterval(() => {
-      navigate("/login") 
-    }, 1000);
-   
+   navigate("/login") 
   };
 
 
