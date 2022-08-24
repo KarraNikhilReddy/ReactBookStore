@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ReactBookStore/static/css/main.46597161.css",
-    "main.js": "/ReactBookStore/static/js/main.1a2e967a.js",
+    "main.js": "/ReactBookStore/static/js/main.0c61af98.js",
     "static/js/787.260b441c.chunk.js": "/ReactBookStore/static/js/787.260b441c.chunk.js",
     "static/media/testPic.jpg": "/ReactBookStore/static/media/testPic.131ea005d07c981cb96e.jpg",
     "static/media/Spell of Tiger.webp": "/ReactBookStore/static/media/Spell of Tiger.894d3b755d02ffcaeb7c.webp",
@@ -21,11 +21,11 @@
     "static/media/General Knowledge.webp": "/ReactBookStore/static/media/General Knowledge.55bf6584eafe69ca9fb3.webp",
     "index.html": "/ReactBookStore/index.html",
     "main.46597161.css.map": "/ReactBookStore/static/css/main.46597161.css.map",
-    "main.1a2e967a.js.map": "/ReactBookStore/static/js/main.1a2e967a.js.map",
+    "main.0c61af98.js.map": "/ReactBookStore/static/js/main.0c61af98.js.map",
     "787.260b441c.chunk.js.map": "/ReactBookStore/static/js/787.260b441c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.46597161.css",
-    "static/js/main.1a2e967a.js"
+    "static/js/main.0c61af98.js"
   ]
 }
