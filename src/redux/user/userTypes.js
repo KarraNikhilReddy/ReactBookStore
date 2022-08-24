@@ -1,6 +1,6 @@
-import {commonApi} from "../commonApi"
+import { COMMON_API } from "../commonApi"
 
-export const USERS_API= `${commonApi}/users`
+export const USERS_API= `${COMMON_API}/users`
 
 
 export const CRUD_OPP_REQUEST = 'CRUD_OPP_REQUEST'

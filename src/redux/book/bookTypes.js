@@ -1,4 +1,4 @@
-import {commonApi} from "../commonApi"
+import {COMMON_API} from "../commonApi"
 
 export const BOOKS_CRUD_OPP_REQUEST = 'BOOKS_CRUD_OPP_REQUEST'
 
@@ -34,8 +34,8 @@ export const SET_BOOKS = "SET_BOOKS"
 
 
 
-export const BOOKS_API= `${commonApi}/books`
+export const BOOKS_API= `${COMMON_API}/books`
 
-export const TIMELINE_API = `${commonApi}/timeline`
+export const TIMELINE_API = `${COMMON_API}/timeline`
 
-export const BOOK_CATEGORIES_API= `${commonApi}/book_categories`
+export const BOOK_CATEGORIES_API= `${COMMON_API}/book_categories`
