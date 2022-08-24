@@ -104,11 +104,6 @@ export const addUser = (user) => {
           info: `New user signed up : userId = ${response.data.id}`,
         })
 
-      }).then(()=>{
-        console.log("in alert")
-        alert(<Link to="/login" className="btn btn-outline-warning logInBtn me-3">
-        Log in
-      </Link>)
       })
       .catch((error) => {
         dispatch(crudOppFailure(`"addUser Failed" : ${error.message}`));
