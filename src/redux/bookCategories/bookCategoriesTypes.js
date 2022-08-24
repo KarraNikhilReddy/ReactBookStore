@@ -6,7 +6,7 @@ import {COMMON_API} from "../commonApi"
 // export const BOOK_CATEGORIES_API= 'https://my-json-server.typicode.com/KarraNikhilReddy/db/book_categories'
 
 
-export const BOOK_CATEGORIES_API= `${COMMON_API}/users/book_categories`
+export const BOOK_CATEGORIES_API= `${COMMON_API}/book_categories`
 
 
 
