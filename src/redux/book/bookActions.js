@@ -230,14 +230,14 @@ const bookCategorySort = (book, newBookId) => {
           }
 
           if (doesCategoryExist) {
-            
+            console.log("existing cat")
             return axios
               .patch(`${BOOK_CATEGORIES_API}/${book.category}`, {
                 relatedBookIds: [...tempArray, newBookId],
               })
 
           } else {
-            
+            console.log("non-existing cat")
             return axios
               .post(BOOK_CATEGORIES_API, {
                 id: book.category,
@@ -247,7 +247,10 @@ const bookCategorySort = (book, newBookId) => {
           }
         });
       }).then(() => {
-        window.location.reload()
+        setTimeout(() => {
+          window.location.reload()
+        }, 500);
+       
       })
   }
 }
