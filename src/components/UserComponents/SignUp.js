@@ -39,6 +39,8 @@ function SignUp() {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
+
+  
   const addHandler = (e,user) => {
     e.preventDefault();
   
