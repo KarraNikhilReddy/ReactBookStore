@@ -45,7 +45,9 @@ function SignUp() {
     e.preventDefault();
   
     dispatch(addUser(user));
-  navigate("/login") 
+
+   
+ /*  navigate("/login")  */
   };
 
 

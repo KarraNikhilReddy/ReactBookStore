@@ -19,11 +19,22 @@ import BookCard from "./BookCard";
 /* import MyBookCard from "./MyBookCard"; */
 
 function Home() {
+
+
+  
   const currentState = useSelector((state) => state);
   const { currentUser } = currentState.userReducer;
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks())
+    dispatch(getBookCategories())
+    }, [])
+
+
   const bookCategories = currentState.bookCategoriesReducer.book_categories;
   const allBooks = currentState.bookReducer.books;
+
+
 
   let [selectedCategory, setCelectedCategory] = useState("all");
 

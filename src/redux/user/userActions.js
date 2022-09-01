@@ -15,12 +15,10 @@ import { BOOKS_API } from "../book/bookTypes";
 import {
   decreaseBookQuantity,
   increaseBookQuantity,
-  getBooks
+  getBooks,
 } from "../book/bookActions";
 
-
 import { Link, useNavigate } from "react-router-dom";
-
 
 export const crudOppRequest = (message) => {
   return {
@@ -82,37 +80,37 @@ export const getUsers = () => {
   };
 };
 
-
-
 /* const navigate = useNavigate(); */
 
 export const addUser = (user) => {
-
   return (dispatch) => {
-
     dispatch(crudOppRequest("addUser loading"));
-
 
     axios
       .post(USERS_API, user)
       .then((response) => {
-
         const now = new Date().toLocaleString();
 
         return axios.post(TIMELINE_API, {
           timeStamp: now,
           info: `New user signed up : userId = ${response.data.id}`,
-        })
+        });
+      })
+      .then(() => {
 
+       
+        var result = window.confirm("Signup Successfull...! Try Login...");
+
+        if (result) {
+          window.location.href = "#/login";
+          //  window.open("#/login");
+        }
       })
       .catch((error) => {
         dispatch(crudOppFailure(`"addUser Failed" : ${error.message}`));
-      })
+      });
   };
 };
-
-
-
 
 /* const timelineUpdate = (userId) => {
  
@@ -122,11 +120,6 @@ export const addUser = (user) => {
     info: `New user signed up : userId = ${userId}`,
   })
 } */
-
-
-
-
-
 
 export const deleteUser = (id) => {
   return (dispatch) => {
@@ -150,11 +143,9 @@ export const deleteUser = (id) => {
 export const updateUser = (id, user) => {
   return (dispatch) => {
     dispatch(crudOppRequest("updateUser loading"));
-    axios
-      .put(`${USERS_API}/${id}`, user)
-      .then((response) => {
-        dispatch(crudOppSuccess("updateUser Success"));
-      })
+    axios.put(`${USERS_API}/${id}`, user).then((response) => {
+      dispatch(crudOppSuccess("updateUser Success"));
+    });
     /*     .catch((error) => {
           dispatch(crudOppFailure(`"updateUser Failed" : ${error.message}`));
         }); */
@@ -176,23 +167,17 @@ export const getUser = (id) => {
   };
 };
 
-
 export const loginHandler = (userId) => {
-
   return (dispatch) => {
-   
-    dispatch(getUser(userId))
-
+    dispatch(getUser(userId));
 
     const now = new Date().toLocaleString();
     return axios.post(TIMELINE_API, {
       timeStamp: now,
       info: `UserId : ${userId}  > Logged in`,
-    })
-  }
-}
-
-
+    });
+  };
+};
 
 export const addBookToUser = (id, book) => {
   return (dispatch) => {
@@ -202,17 +187,17 @@ export const addBookToUser = (id, book) => {
 
     let tempUser = {};
 
-    axios.get(`${USERS_API}/${id}`).then((response) => {
-    
-      tempUser = response.data;
-    
-      tempUser.cart.push(book);
+    axios
+      .get(`${USERS_API}/${id}`)
+      .then((response) => {
+        tempUser = response.data;
 
-      /*   dispatch(updateUser(id, tempUser)) */
+        tempUser.cart.push(book);
 
-      return axios
-        .put(`${USERS_API}/${id}`, tempUser)
-      /*   .then(() => {
+        /*   dispatch(updateUser(id, tempUser)) */
+
+        return axios.put(`${USERS_API}/${id}`, tempUser);
+        /*   .then(() => {
           dispatch(crudOppSuccess("addBook to user Success"));
         })
        
@@ -223,37 +208,31 @@ export const addBookToUser = (id, book) => {
             info: `${book.bookName} (bookId : ${book.bookId}) added to user cart (userId = ${id})`,
           })
         }) */
-    }).then(() => {
-      const now = new Date().toLocaleString();
-      return axios.post(TIMELINE_API, {
-        timeStamp: now,
-        info: `${book.bookName} (bookId : ${book.bookId}) added to user cart (userId = ${id})`,
       })
-    }).then(() => {
-      
-      dispatch(decreaseBookQuantity(book.bookId));
-    }).then(() => {
-      dispatch(getUser(id));
-    }).then(() => {
-      dispatch(getBooks());
-    })
-
-
-   
+      .then(() => {
+        const now = new Date().toLocaleString();
+        return axios.post(TIMELINE_API, {
+          timeStamp: now,
+          info: `${book.bookName} (bookId : ${book.bookId}) added to user cart (userId = ${id})`,
+        });
+      })
+      .then(() => {
+        dispatch(decreaseBookQuantity(book.bookId));
+      })
+      .then(() => {
+        dispatch(getUser(id));
+      })
+      .then(() => {
+        dispatch(getBooks());
+      });
   };
 };
-
-
-
-
 
 export const patchUser = (id, obj) => {
   return (dispatch) => {
     axios
       .patch(`${USERS_API}/${id}`, obj)
-      .then((response) => {
-       
-      })
+      .then((response) => {})
       .catch((error) => {
         dispatch(crudOppFailure(`"patchUser Failed" : ${error.message}`));
       });
@@ -266,9 +245,9 @@ export const removeItemFromCart = (userId, bookIndex) => {
 
     let tempUser = {};
     let bookId = 0;
-    let item = []
-    let booksArray = []
-    let book = {}
+    let item = [];
+    let booksArray = [];
+    let book = {};
     axios
       .get(`${USERS_API}/${userId}`)
       .then((response) => {
@@ -279,41 +258,31 @@ export const removeItemFromCart = (userId, bookIndex) => {
         bookId = booksArray[bookIndex].bookId;
         booksArray.splice(bookIndex, 1);
 
-        return axios
-          .patch(`${USERS_API}/${userId}`, { cart: booksArray })
-      }).then(() => {
+        return axios.patch(`${USERS_API}/${userId}`, { cart: booksArray });
+      })
+      .then(() => {
         /* dispatch(increaseBookQuantity(bookId)); */
-        return axios
-          .get(`${BOOKS_API}/${bookId}`)
+        return axios.get(`${BOOKS_API}/${bookId}`);
       })
       .then((response) => {
         book = response.data;
-      
+
         book.quantity++;
-       
-        return axios
-          .patch(`${BOOKS_API}/${bookId}`, book)
-      }).then(() => {
+
+        return axios.patch(`${BOOKS_API}/${bookId}`, book);
+      })
+      .then(() => {
         const now = new Date().toLocaleString();
         return axios.post(TIMELINE_API, {
           timeStamp: now,
           info: `${item.bookName} (bookId : ${item.bookId}) removed from user cart (userId = ${userId}) & Book quantity increased : bookId = ${book.id}`,
-        })
+        });
       })
       .then(() => {
-      
         window.location.reload();
-      })
-
-
+      });
   };
 };
-
-
-
-
-
-
 
 export const buyCartBooks = (userId) => {
   return (dispatch) => {
@@ -329,15 +298,12 @@ export const buyCartBooks = (userId) => {
         string = string.substring(0, string.length - 1);
         string += "]";
 
-        return axios
-          .patch(`${USERS_API}/${userId}`, {
-            mybooks: [...tempUser.mybooks, ...tempUser.cart],
-            cart: [],
-          })
-
-      }).then(() => {
-       
-
+        return axios.patch(`${USERS_API}/${userId}`, {
+          mybooks: [...tempUser.mybooks, ...tempUser.cart],
+          cart: [],
+        });
+      })
+      .then(() => {
         const now = new Date().toLocaleString();
 
         return axios.post(TIMELINE_API, {
@@ -351,18 +317,13 @@ export const buyCartBooks = (userId) => {
   };
 };
 
-
-
-
-
-
-export const logoutHandler=(userId) =>{
-  return (dispatch) =>{
+export const logoutHandler = (userId) => {
+  return (dispatch) => {
     const now = new Date().toLocaleString();
 
-     axios.post(TIMELINE_API, {
+    axios.post(TIMELINE_API, {
       timeStamp: now,
       info: `UserId = ${userId} > logged out`,
     });
-  }
-}
+  };
+};
